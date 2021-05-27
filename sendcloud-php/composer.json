@@ -1,0 +1,26 @@
+{
+  "name": "wch/send_cloud",
+  "description": "sendcloud邮件短信服务",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "sendcloud",
+    "mail",
+    "sms"
+  ],
+  "authors": [
+    {
+      "name": "wch",
+      "email": "wuchunhe3@163.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SendCloud\\": "src"
+    }
+  }
+}
