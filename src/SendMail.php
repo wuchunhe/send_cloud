@@ -6,14 +6,14 @@
  */
 
 //邮件发送
-namespace SendCloud\src;
+namespace sendcloud;
 
-use SendCloud\lib\util\HttpClient;
-use SendCloud\lib\SendCloud;
-use SendCloud\lib\util\Attachment;
-use SendCloud\lib\util\Mail;
-use SendCloud\lib\util\TemplateContent;
-use SendCloud\lib\util\Mimetypes;
+use sendcloud\lib\util\HttpClient;
+use sendcloud\lib\SendCloud;
+use sendcloud\lib\util\Attachment;
+use sendcloud\lib\util\Mail;
+use sendcloud\lib\util\TemplateContent;
+use sendcloud\lib\util\Mimetypes;
 
 class SendMail extends Base
 {
@@ -45,7 +45,6 @@ class SendMail extends Base
 
     function sendCommonMail_v2()
     {
-
         $sendcloud = $this->__init('v2');
         $mail = new Mail();
         $mail->addBcc("lianzimi@ifaxin.com");

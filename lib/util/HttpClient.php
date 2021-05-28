@@ -1,7 +1,7 @@
 <?php
-namespace SendCloud\lib\util;
+namespace sendcloud\lib\util;
 //require_once 'Response.php';
-//use SendCloud\lib\util\Response;
+//use sendcloud\lib\util\Response;
 class HttpClient {
 	public function __construct($host) {
 		$this->host = $host;

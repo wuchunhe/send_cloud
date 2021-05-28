@@ -21,7 +21,7 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace SendCloud\lib\util;
+namespace sendcloud\lib\util;
 /**
  * Provides mappings of file extensions to mimetypes
  *

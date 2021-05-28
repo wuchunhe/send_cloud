@@ -1,8 +1,8 @@
 <?php
-namespace SendCloud\lib;
+namespace sendcloud\lib;
 //require_once 'util/HttpClient.php';
 require_once 'Config.php';
-use SendCloud\lib\util\HttpClient;
+use sendcloud\lib\util\HttpClient;
 class SendCloudSMS {
 	private $host = 'http://www.sendcloud.net/';
 	private $sms_user;
