@@ -6,7 +6,7 @@
  */
 
 
-namespace SendCloud\src;
+namespace sendcloud;
 
 
 class Base

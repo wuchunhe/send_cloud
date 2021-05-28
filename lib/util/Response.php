@@ -1,5 +1,5 @@
 <?php
-namespace SendCloud\lib\util;
+namespace sendcloud\lib\util;
 class Response {
 	private $body;
 	

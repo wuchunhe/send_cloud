@@ -1,5 +1,6 @@
 <?php
-namespace SendCloud\lib\util;
+namespace sendcloud\lib\util;
+use JsonSerializable;
 /**
  * 
  * @author xjm

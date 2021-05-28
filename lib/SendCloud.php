@@ -1,9 +1,9 @@
 <?php
-namespace SendCloud\lib;
+namespace sendcloud\lib;
 //require_once 'util/HttpClient.php';
 require_once 'Config.php';
-use SendCloud\lib\util\HttpClient;
-use SendCloud\lib\util\Mail;
+use sendcloud\lib\util\HttpClient;
+use sendcloud\lib\util\Mail;
 class SendCloud {
 	private $host_v1 = 'http://sendcloud.sohu.com';
 	private $host_v2 = 'http://api.sendcloud.net/apiv2/';

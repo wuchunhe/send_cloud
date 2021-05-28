@@ -6,12 +6,12 @@
  */
 
 //语言发送
-namespace SendCloud\src;
+namespace sendcloud;
 
-use SendCloud\lib\SendCloudSMS;
-use SendCloud\lib\util\SmsMsg;
-use SendCloud\lib\util\VoiceMsg;
-use SendCloud\lib\util\MsgType;
+use sendcloud\lib\SendCloudSMS;
+use sendcloud\lib\util\SmsMsg;
+use sendcloud\lib\util\VoiceMsg;
+use sendcloud\lib\util\MsgType;
 
 class SendVoice
 {

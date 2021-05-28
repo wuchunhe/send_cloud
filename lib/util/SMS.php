@@ -1,5 +1,6 @@
 <?php
-namespace SendCloud\lib\util;
+namespace sendcloud\lib\util;
+use JsonSerializable;
 /**
  * 短信消息
  * @param templateId 模板ID
