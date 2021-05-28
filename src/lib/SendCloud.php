@@ -11,7 +11,13 @@ class SendCloud {
 	private $api_user;
 	private $api_key;
 	private $version;
+	private $config;
 	public function __construct($api_user, $api_key, $version = "v1") {
+        $this->config['v1']['send']='/webapi/mail.send.json';
+        $this->config['v1']['sendTemplate']='/webapi/mail.send_template.json';
+
+        $this->config['v2']['send']='/mail/send';
+        $this->config['v2']['sendTemplate']='/mail/sendtemplate';
 		$host = ($version=='v1') ? $this->host_v1:$this->host_v2;
 		$this->api_user = $api_user;
 		$this->api_key = $api_key;
@@ -377,32 +383,30 @@ class SendCloud {
 		);
 	}
 	public function sendCommon(Mail $mail) {
-		global $config;
-		
 		$method = "POST";
-		echo  $config [$this->version] ['send'];
+
 		if ($mail->hasAttachment ()) {
 			$bodyData = $this->wrapBody ( $mail );
 			
-			$resonse = $this->client->mutilpost ( 'POST', $config [$this->version] ['send'], $bodyData ['body'], $bodyData ['header'] );
+			$resonse = $this->client->mutilpost ( 'POST', $this->config [$this->version] ['send'], $bodyData ['body'], $bodyData ['header'] );
 			
 		} else {
 			$param = $this->wrapParam ( $mail );
 			
-			$resonse = $this->client->post ( $method, $config [$this->version] ['send'], '', $param );
+			$resonse = $this->client->post ( $method, $this->config [$this->version] ['send'], '', $param );
 			echo $resonse->body ();
 		}
 	}
 	public function sendTemplate(Mail $mail) {
-		global $config;
+
 		$method = "POST";
 		if ($mail->hasAttachment ()) {
 			$bodyData = $this->wrapBody ( $mail );
-			$resonse = $this->client->mutilpost ( 'POST', $config [$this->version] ['sendTemplate'], $bodyData ['body'], $bodyData ['header'] );
+			$resonse = $this->client->mutilpost ( 'POST', $this->config [$this->version] ['sendTemplate'], $bodyData ['body'], $bodyData ['header'] );
 			echo $resonse->body ();
 		} else {
 			$param = $this->wrapParam ( $mail );
-			$resonse = $this->client->post ( $method, $config [$this->version] ['sendTemplate'], '', $param );
+			$resonse = $this->client->post ( $method, $this->config [$this->version] ['sendTemplate'], '', $param );
 			echo $resonse->body ();
 		}
 	}
